@@ -12,18 +12,23 @@ require('telescope').setup {
           i = {
               ["<esc>"] = require('telescope.actions').close
           }
-      },
-      pickers = {
-          buffers = {
-              theme = "dropdown",
-              color_devicons = true,
-              mappings = {
-                  i = {
-                      ["<tab>"] = require("telescope.actions").move_selection_next
-                  }
-              }
-          }
       }
+  },
+  find_files = {
+	  theme = 'dropdown'
+  },
+  pickers = {
+	  buffers = {
+		  theme = "dropdown",
+		  sort_lastused = true,
+		  color_devicons = true,
+		  previever = false,
+		  mappings = {
+			  i = {
+				  ["<tab>"] = require("telescope.actions").move_selection_next
+			  }
+		  }
+	  }
   },
   extensions = {
     fzf = {

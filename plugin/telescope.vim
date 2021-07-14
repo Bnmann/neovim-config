@@ -15,8 +15,8 @@ inoremap <C-S-p> <ESC>:lua require('telescope.builtin').commands()<CR>
 nnoremap <C-o> :lua require('telescope.builtin').treesitter()<CR>
 inoremap <C-o> <ESC>:lua require('telescope.builtin').treesitter()<CR>
 
-nnoremap <C-tab> :lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ winblend = 10 }))<cr>
-inoremap <C-tab> <ESC>:lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ winblend = 10 }))<cr>
+nnoremap <C-tab> :lua require'telescope.builtin'.buffers()<cr>
+inoremap <C-tab> <ESC>:lua require'telescope.builtin'.buffers()<cr>
 
 
 
