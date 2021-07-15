@@ -1,4 +1,4 @@
-local function on_attach_override() 
+local function on_attach_override()
 end
 
 require('lspconfig').clangd.setup {
