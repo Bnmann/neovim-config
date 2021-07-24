@@ -16,6 +16,7 @@ augroup fmt
    	autocmd BufWritePre *.cpp lua vim.lsp.buf.formatting_sync(nil, 1000)
    	autocmd BufWritePre *.c lua vim.lsp.buf.formatting_sync(nil, 1000)
    	autocmd BufWritePre *.h lua vim.lsp.buf.formatting_sync(nil, 1000)
+   	autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 1000)
 augroup END
 
 

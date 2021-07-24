@@ -1,9 +1,23 @@
 local function on_attach_override()
+ 	require ('lsp_signature').on_attach({bind = false,  use_lspsaga=true})
+	-- vim.lsp.handler
 end
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+	properties = {
+		'documentation',
+		'detail',
+		'additionalTextEdits',
+	}
+}
+
 
 require('lspconfig').clangd.setup {
     on_attach = on_attach_override,
-    root_dir = function() return vim.loop.cwd() end
+    root_dir = function() return vim.loop.cwd() end,
+	capabilities = capabilities
 }
 require('lspsaga').init_lsp_saga()
 require('compe').setup {
@@ -11,6 +25,7 @@ require('compe').setup {
   autocomplete = true;
   debug = false;
   min_length = 1;
+  usePlaceholders = true;
   preselect = 'enable';
   throttle_time = 80;
   source_timeout = 200;

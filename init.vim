@@ -17,8 +17,19 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'peterhoeg/vim-qml'
 	Plug 'fabi1cazenave/termopen.vim'
 	Plug 'equalsraf/neovim-gui-shim'
+	Plug 'numtostr/FTerm.nvim'
+	Plug 'ray-x/lsp_signature.nvim'
+	Plug 'ThePrimeagen/harpoon'
+	Plug 'norcalli/nvim-colorizer.lua'
+	Plug 'skywind3000/asynctasks.vim'
+	Plug 'skywind3000/asyncrun.vim'
+	Plug 'tpope/vim-eunuch'
 call plug#end()
 
 
+lua require('FTerm').setup()
 
-
+let g:asyncrun_open = 6
+let g:asynctasks_term_pos = 'bottom'
+let g:asynctasks_term_rows = 10    " set height for the horizontal terminal split
+let g:asynctasks_term_cols = 80    " set width for vertical terminal split
