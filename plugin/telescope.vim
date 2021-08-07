@@ -12,8 +12,8 @@ inoremap <C-p> <ESC>:lua require('telescope.builtin').find_files()<CR>
 nnoremap <C-S-p> :lua require('telescope.builtin').commands()<CR>
 inoremap <C-S-p> <ESC>:lua require('telescope.builtin').commands()<CR>
 
-nnoremap <C-o> :lua require('telescope.builtin').treesitter()<CR>
-inoremap <C-o> <ESC>:lua require('telescope.builtin').treesitter()<CR>
+nnoremap <C-o> :lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>
+inoremap <C-o> <ESC>:lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>
 
 nnoremap <C-tab> :lua require'telescope.builtin'.buffers()<cr>
 inoremap <C-tab> <ESC>:lua require'telescope.builtin'.buffers()<cr>
