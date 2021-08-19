@@ -24,6 +24,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'skywind3000/asynctasks.vim'
 	Plug 'skywind3000/asyncrun.vim'
 	Plug 'tpope/vim-eunuch'
+    Plug 'christianchiarulli/nvcode-color-schemes.vim'
 call plug#end()
 
 

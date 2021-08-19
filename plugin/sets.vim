@@ -27,7 +27,8 @@ set termguicolors ""
 set signcolumn=yes "" Extra column for diagnositcs
 set cmdheight=1 "" Extra space for messages
 
-colorscheme gruvbox
+let g:nvcode_termcolors=256
+colorscheme snazzy
 highlight Normal guibg=none
 
 set title
