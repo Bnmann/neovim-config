@@ -5,7 +5,7 @@ endfunction
 function! neoformat#formatters#qml#qmlfmt() abort
      return {
          \ 'exe': 'qmlfmt',
-         \ 'args': ['-w -e'],
+         \ 'args': [],
          \ 'stdin': 1
          \ }
  endfunction
