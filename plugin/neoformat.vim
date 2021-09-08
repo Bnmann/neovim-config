@@ -18,6 +18,7 @@ augroup fmt
    	autocmd BufWritePre *.c lua vim.lsp.buf.formatting_sync(nil, 1000)
    	autocmd BufWritePre *.h lua vim.lsp.buf.formatting_sync(nil, 1000)
    	autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 1000)
+	autocmd BufWritePre *.qml undojoin | Neoformat
 augroup END
 
 
