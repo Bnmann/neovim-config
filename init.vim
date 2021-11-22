@@ -6,7 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'gruvbox-community/gruvbox'
     Plug 'neovim/nvim-lspconfig'
-    Plug 'glepnir/lspsaga.nvim'
+    Plug 'tami5/lspsaga.nvim', { 'branch' : 'nvim51' }
     Plug 'hrsh7th/nvim-compe'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
