@@ -27,9 +27,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
 call plug#end()
 
-
-lua require('FTerm').setup()
-
 let g:asyncrun_open = 6
 let g:asynctasks_term_pos = 'bottom'
 let g:asynctasks_term_rows = 10    " set height for the horizontal terminal split
