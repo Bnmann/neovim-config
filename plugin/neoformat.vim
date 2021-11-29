@@ -21,4 +21,6 @@ augroup fmt
 	autocmd BufWritePre *.qml undojoin | Neoformat
 augroup END
 
+command ClangFormat lua vim.lsp.buf.formatting_sync(nil, 1000)
+
 
