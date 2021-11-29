@@ -16,7 +16,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'norcalli/nvim-terminal.lua'
     Plug 'peterhoeg/vim-qml'
 	Plug 'fabi1cazenave/termopen.vim'
-	Plug 'equalsraf/neovim-gui-shim'
 	Plug 'numtostr/FTerm.nvim'
 	Plug 'ray-x/lsp_signature.nvim'
 	Plug 'ThePrimeagen/harpoon'
