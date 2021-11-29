@@ -1,6 +1,6 @@
 set tabstop=4 softtabstop=4 "" Tab -> 4 spaces
 set shiftwidth=4
-set noexpandtab
+set expandtab
 set smartindent
 set list
 set listchars=tab:▶\ ,trail:·,extends:\#,nbsp:.
