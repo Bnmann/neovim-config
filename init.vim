@@ -24,6 +24,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'skywind3000/asyncrun.vim'
 	Plug 'tpope/vim-eunuch'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
+	Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
 let g:asyncrun_open = 6
