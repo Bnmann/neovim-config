@@ -4,7 +4,7 @@ let g:neoformat_cpp_clangformat = {
     \}
 let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
-let g:neoformat_enabled_qml = ['qmlfmt']
+let g:neoformat_enabled_qml = ['qmlformat6']
 let g:neoformat_basic_format_trim = 1
 
 augroup fmt
