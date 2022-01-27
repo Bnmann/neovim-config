@@ -29,7 +29,7 @@ set cmdheight=1 "" Extra space for messages
 
 let g:nvcode_termcolors=256
 colorscheme snazzy
-highlight Normal guibg=none
+"highlight Normal guibg=none
 
 set title
 
