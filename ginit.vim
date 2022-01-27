@@ -1,7 +1,7 @@
 " Enable Mouse
 set mouse=a
 
-GuiFont SauceCodePro\ Nerd\ Font:h16
+GuiFont SauceCodePro\ Nerd\ Font\ Mono:h16
 GuiAdaptiveFont 1
 GuiTabline 1
 GuiPopupmenu 1
