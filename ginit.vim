@@ -23,5 +23,5 @@ cnoremap <S-Insert> <C-R>+
 nnoremap <C-E> :GuiTreeviewShow<CR>
 nnoremap <C-B> :GuiTreeviewToggle<CR>
 
-command FullScreen :call GuiWindowFullscreen(1)
-command Windowed :call GuiWindowFullscreen(0)
+command! FullScreen :call GuiWindowFullScreen(1)
+command! Windowed :call GuiWindowFullScreen(0)
