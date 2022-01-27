@@ -25,3 +25,31 @@ nnoremap <C-B> :GuiTreeviewToggle<CR>
 
 command! FullScreen :call GuiWindowFullScreen(1)
 command! Windowed :call GuiWindowFullScreen(0)
+
+let g:GuiFontSize=16
+let g:GuiFontFamily="SauceCodePro\ Nerd\ Font\ Mono"
+
+function! SetFontSize(size)
+    let g:GuiFontSize=a:size
+    let font = g:GuiFontFamily . ":h" . g:GuiFontSize
+    :call GuiFont(font)
+endfunction
+command! -nargs=1 -bang SetFontSize :call SetFontSize(<args>)
+
+function! SetDefaultFontSize()
+    :call SetFontSize(16)
+endfunction
+command! SetDefaultFontSize :call SetDefaultFontSize()
+
+function! IncreaseFontSize()
+    :call SetFontSize(g:GuiFontSize + 1)
+endfunction
+command! IncreaseFontSize :call IncreaseFontSize()
+
+function! DecreaseFontSize()
+    :call SetFontSize(g:GuiFontSize - 1)
+endfunction
+command! DecreaseFontSize :call DecreaseFontSize()
+
+
+
