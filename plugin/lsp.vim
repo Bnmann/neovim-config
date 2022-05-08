@@ -12,4 +12,5 @@ nnoremap <silent><leader>gd <cmd>lua require'lspsaga.provider'.preview_definitio
 nnoremap <silent><leader>cd <cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>
 
 
+command! LspRename lua require('lspsaga.rename').rename()<CR>
 
