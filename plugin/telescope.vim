@@ -19,5 +19,5 @@ nnoremap <C-tab> :lua require'telescope.builtin'.buffers()<cr>
 inoremap <C-tab> <ESC>:lua require'telescope.builtin'.buffers()<cr>
 
 
-
+nnoremap <C-S-l> :lua require('telescope.builtin').quickfix()<cr>
 
