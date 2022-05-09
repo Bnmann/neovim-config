@@ -20,8 +20,8 @@ inoremap <S-Insert> <C-R>+
 nnoremap <S-Insert> <C-R>+
 cnoremap <S-Insert> <C-R>+
 
-nnoremap <C-E> :GuiTreeviewShow<CR>
-nnoremap <C-B> :GuiTreeviewToggle<CR>
+"nnoremap <C-E> :GuiTreeviewShow<CR>
+"nnoremap <C-B> :GuiTreeviewToggle<CR>
 
 command! FullScreen :call GuiWindowFullScreen(1)
 command! Windowed :call GuiWindowFullScreen(0)
