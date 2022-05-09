@@ -1,31 +1,32 @@
 set path+=**
 
 call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'gruvbox-community/gruvbox'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'tami5/lspsaga.nvim', { 'branch' : 'nvim51' }
-    Plug 'hrsh7th/nvim-compe'
-    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'sbdchd/neoformat'
-    Plug 'famiu/nvim-reload'
-    Plug 'kyazdani42/nvim-web-devicons'
-    Plug 'norcalli/nvim-terminal.lua'
-    Plug 'peterhoeg/vim-qml'
-	Plug 'fabi1cazenave/termopen.vim'
-	Plug 'numtostr/FTerm.nvim'
-	Plug 'ray-x/lsp_signature.nvim'
-	Plug 'ThePrimeagen/harpoon'
-	Plug 'norcalli/nvim-colorizer.lua'
-	Plug 'skywind3000/asynctasks.vim'
-	Plug 'skywind3000/asyncrun.vim'
-	Plug 'tpope/vim-eunuch'
+    Plug 'ThePrimeagen/harpoon'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
-	Plug 'tikhomirov/vim-glsl'
+    Plug 'fabi1cazenave/termopen.vim'
+    Plug 'famiu/nvim-reload'
+    Plug 'gruvbox-community/gruvbox'
+    Plug 'hrsh7th/nvim-compe'
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'norcalli/nvim-terminal.lua'
+    Plug 'numtostr/FTerm.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-telescope/telescope-file-browser.nvim'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/playground'
+    Plug 'peterhoeg/vim-qml'
+    Plug 'ray-x/lsp_signature.nvim'
+    Plug 'sbdchd/neoformat'
+    Plug 'skywind3000/asyncrun.vim'
+    Plug 'skywind3000/asynctasks.vim'
+    Plug 'tami5/lspsaga.nvim', { 'branch' : 'nvim51' }
+    Plug 'tikhomirov/vim-glsl'
+    Plug 'tpope/vim-eunuch'
 call plug#end()
 
 let g:asyncrun_open = 6
