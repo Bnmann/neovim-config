@@ -7,6 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'famiu/nvim-reload'
     Plug 'gruvbox-community/gruvbox'
     Plug 'hrsh7th/nvim-compe'
+    Plug 'kyazdani42/nvim-tree.lua'
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'neovim/nvim-lspconfig'
     Plug 'norcalli/nvim-colorizer.lua'
