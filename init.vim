@@ -25,7 +25,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'sbdchd/neoformat'
     Plug 'skywind3000/asyncrun.vim'
     Plug 'skywind3000/asynctasks.vim'
-    Plug 'tami5/lspsaga.nvim', { 'branch' : 'nvim51' }
+    Plug 'tami5/lspsaga.nvim'
     Plug 'tikhomirov/vim-glsl'
     Plug 'tpope/vim-eunuch'
 call plug#end()
