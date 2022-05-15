@@ -2,15 +2,19 @@
 
 set -eu
 
-rm -rf ~/.config/nvim
+INSTALL_DIRECTORY="$(cd ~/.config && pwd)/nvim"
+CONFIG_DIRECTORY=$(pwd)
 
-mkdir -p ~/.config/nvim/plugin
-mkdir -p ~/.config/nvim/after/plugin
-mkdir -p ~/.config/nvim/lua/vnconfig
-mkdir -p ~/.config/nvim/autoload/neoformat/formatters/
+rm -rf $INSTALL_DIRECTORY
+mkdir -p $INSTALL_DIRECTORY
+echo "INSTALL_DIRECTORY: $INSTALL_DIRECTORY"
 
-
-for f in `find . -regex ".*\.vim$\|.*\.lua$"`; do
-    rm -rf ~/.config/nvim/$f
-    ln -s `pwd`/$f ~/.config/nvim/$f
+for f in $(find . -regex ".*\.vim$\|.*\.lua$"); do
+    source=$(realpath "$CONFIG_DIRECTORY/$f")
+    relative=$(realpath --relative-to="$CONFIG_DIRECTORY" "$f")
+    destination=$(realpath -m "$INSTALL_DIRECTORY/$f")
+    destination_dir=$(dirname $destination)
+    mkdir -p "$destination_dir"
+    echo "Installing $relative"
+    ln -s "$source" "$destination"
 done
