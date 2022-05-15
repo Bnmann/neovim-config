@@ -41,4 +41,6 @@ if exists("g:gnvim")
 
     vnoremap <C-S-y> "+y
 
+    call gnvim#enable_ext_cmdline(0)
+
 endif
