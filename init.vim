@@ -20,6 +20,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/playground'
+    Plug 'p00f/clangd_extensions.nvim'
     Plug 'peterhoeg/vim-qml'
     Plug 'ray-x/lsp_signature.nvim'
     Plug 'sbdchd/neoformat'

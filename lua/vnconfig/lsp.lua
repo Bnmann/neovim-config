@@ -13,12 +13,16 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 	}
 }
 
+require("clangd_extensions").setup({
+	server = {
+		on_attach = on_attach_override,
+		root_dir = function()
+			return vim.loop.cwd()
+		end,
+		capabilities = capabilities,
+	},
+})
 
-require('lspconfig').clangd.setup {
-    on_attach = on_attach_override,
-    root_dir = function() return vim.loop.cwd() end,
-	capabilities = capabilities
-}
 require('lspsaga').init_lsp_saga()
 require('compe').setup {
   enabled = true;
