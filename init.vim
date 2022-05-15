@@ -41,3 +41,5 @@ let g:asyncrun_open = 6
 let g:asynctasks_term_pos = 'bottom'
 let g:asynctasks_term_rows = 10    " set height for the horizontal terminal split
 let g:asynctasks_term_cols = 80    " set width for vertical terminal split
+
+set guifont=SauceCodePro\ Nerd\ Font\ Mono:h16
