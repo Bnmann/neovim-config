@@ -29,7 +29,16 @@ if exists("g:gnvim")
     endfunction
     command! DecreaseFontSize :call DecreaseFontSize()
 
-    inoremap <C-S-Insert> <C-R>+
-    nnoremap <C-S-Insert> <C-R>+
-    cnoremap <C-S-Insert> <C-R>+
+    inoremap <C-Insert> <ESC>"*p
+    nnoremap <C-Insert> "*p
+    cnoremap <C-Insert> "*p
+    vnoremap <C-Insert> "*p
+
+    inoremap <C-S-Insert> <ESC>"+p
+    nnoremap <C-S-Insert> "+p
+    cnoremap <C-S-Insert> "+p
+    vnoremap <C-S-Insert> "+p
+
+    vnoremap <C-S-y> "+y
+
 endif
