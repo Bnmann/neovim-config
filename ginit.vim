@@ -16,9 +16,11 @@ nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>
 inoremap <silent><RightMouse> <Esc>:call GuiShowContextMenu()<CR>
 vnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>gv
 
-inoremap <S-Insert> <C-R>+
-nnoremap <S-Insert> <C-R>+
-cnoremap <S-Insert> <C-R>+
+inoremap <C-S-Insert> <ESC>"*p
+nnoremap <C-S-Insert> "*p
+cnoremap <C-S-Insert> "*p
+
+command! PasteFromClipBoard "*p
 
 "nnoremap <C-E> :GuiTreeviewShow<CR>
 "nnoremap <C-B> :GuiTreeviewToggle<CR>
