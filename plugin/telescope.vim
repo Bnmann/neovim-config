@@ -21,3 +21,4 @@ inoremap <C-tab> <ESC>:lua require'telescope.builtin'.buffers()<cr>
 
 nnoremap <C-S-l> :lua require('telescope.builtin').quickfix()<cr>
 
+command! -bang -nargs=1 GrepFiles :lua require('telescope.builtin').live_grep({glob_pattern="<args>"})
