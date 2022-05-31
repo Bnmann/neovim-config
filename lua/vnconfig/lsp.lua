@@ -23,6 +23,8 @@ require("clangd_extensions").setup({
 	},
 })
 
+require('lspconfig').pylsp.setup{}
+
 local cmp = require("cmp")
 cmp.setup({
 	snippet = {
