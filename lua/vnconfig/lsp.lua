@@ -24,6 +24,7 @@ require("clangd_extensions").setup({
 })
 
 require('lspconfig').pylsp.setup{}
+require('lspconfig').pyright.setup{}
 
 local cmp = require("cmp")
 cmp.setup({
