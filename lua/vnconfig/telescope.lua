@@ -26,7 +26,7 @@ require("telescope").setup({
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
 		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
 		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
-        buffer_previewer_maker = new_maker,
+		buffer_previewer_maker = new_maker,
 		mappings = {
 			i = {
 				["<esc>"] = require("telescope.actions").close,
@@ -41,7 +41,15 @@ require("telescope").setup({
 			theme = "dropdown",
 			sort_lastused = true,
 			color_devicons = true,
-			previever = false,
+			previewer = false,
+			layout_config = {
+				vertical = {
+					width = 0.9,
+					anchor = "N",
+				},
+				anchor = "N",
+				width = 0.9,
+			},
 			mappings = {
 				i = {
 					["<tab>"] = require("telescope.actions").move_selection_next,
