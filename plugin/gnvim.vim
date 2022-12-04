@@ -1,5 +1,5 @@
 
-if exists("g:gnvim")
+if exists("g:gnvim") || exists("g:neovide")
     inoremap <S-Insert> <C-R>+
     nnoremap <S-Insert> <C-R>+
     cnoremap <S-Insert> <C-R>+
@@ -29,6 +29,15 @@ if exists("g:gnvim")
     endfunction
     command! DecreaseFontSize :call DecreaseFontSize()
 
+    function! ToggleFullscreen()
+        if g:neovide_fullscreen == v:true
+            let g:neovide_fullscreen = v:false
+        else
+            let g:neovide_fullscreen = v:true
+        endif
+    endfunction
+    command ToggleFullscreen :call ToggleFullscreen()
+
     inoremap <C-Insert> <ESC>"*p
     nnoremap <C-Insert> "*p
     cnoremap <C-Insert> "*p
@@ -41,6 +50,8 @@ if exists("g:gnvim")
 
     vnoremap <C-S-y> "+y
 
-    call gnvim#enable_ext_cmdline(0)
+    if exists("g:gnvim")
+        call gnvim#enable_ext_cmdline(0)
+    endif
 
 endif
