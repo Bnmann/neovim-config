@@ -76,3 +76,17 @@ cmp.setup.cmdline("/", {
 -- })
 
 require("lspsaga").init_lsp_saga()
+
+vim.api.nvim_create_user_command("LspActions", function()
+	require("lspsaga.codeaction").code_action()
+end, { nargs = 0 })
+
+vim.api.nvim_create_user_command("LspRename", function()
+	require("lspsaga.rename").rename()
+end, { nargs = 0 })
+
+vim.api.nvim_create_user_command("LspFormat", function()
+	if vim.g.lspformat == 1 then
+		vim.lsp.buf.formatting_sync(nil, 1000)
+	end
+end, { nargs = 0 })
