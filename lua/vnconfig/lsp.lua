@@ -1,5 +1,5 @@
-local function on_attach_override()
-	require("lsp_signature").on_attach()
+local function on_attach_override(client, bufnr)
+	require("lsp_signature").on_attach(client, bufnr)
 	-- vim.lsp.handler
 end
 
@@ -26,18 +26,16 @@ require("clangd_extensions").setup({
 require("lspconfig").pylsp.setup({})
 require("lspconfig").pyright.setup({})
 require("lspconfig").gopls.setup({})
+require("lspconfig").jdtls.setup({
+})
 
 local cmp = require("cmp")
 cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+			require("luasnip").lsp_expand(args.body)
 		end,
-	},
-	window = {
-		-- completion = cmp.config.window.bordered(),
-		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -52,7 +50,6 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "calc" },
 		{ name = "buffer" },
-		--{ name = "cmdline" },
 	}),
 })
 
@@ -63,17 +60,6 @@ cmp.setup.cmdline("/", {
 		{ name = "buffer" },
 	},
 })
-
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-
--- cmp.setup.cmdline(":", {
--- mapping = cmp.mapping.preset.cmdline(),
--- sources = cmp.config.sources({
--- { name = "path" },
--- }, {
--- { name = "cmdline" },
--- }),
--- })
 
 require("lspsaga").init_lsp_saga()
 

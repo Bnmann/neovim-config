@@ -8,6 +8,8 @@ if exists("g:gnvim") || exists("g:neovide")
     let g:GuiFontFamily='SauceCodePro\ Nerd\ Font\ Mono'
     let g:GuiFont=g:GuiFontFamily . ":h" . g:GuiFontSize
 
+    set guifont=SauceCodePro\ Nerd\ Font\ Mono:h16
+
     function! SetFontSize(size)
         let g:GuiFontSize=a:size
         exe 'set guifont='..g:GuiFontFamily . ":h" . g:GuiFontSize

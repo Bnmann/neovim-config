@@ -15,7 +15,7 @@ require("material").setup({
 		-- "gitsigns",
 		-- "hop",
 		-- "indent-blankline",
-		-- "lspsaga",
+		"lspsaga",
 		-- "mini",
 		-- "neogit",
 		"nvim-cmp",
