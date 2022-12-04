@@ -28,7 +28,7 @@ set signcolumn=yes "" Extra column for diagnositcs
 set cmdheight=1 "" Extra space for messages
 
 let g:nvcode_termcolors=256
-colorscheme snazzy
+colorscheme material
 "highlight Normal guibg=none
 
 set title
