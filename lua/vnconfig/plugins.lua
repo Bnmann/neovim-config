@@ -77,6 +77,8 @@ require("packer").startup(function(use)
 		},
 	})
 
+	use({ "NvChad/nvterm" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
