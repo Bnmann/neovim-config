@@ -19,7 +19,6 @@ augroup fmt
     autocmd BufWritePre *.c lua if vim.g.lspformat == 1 then vim.lsp.buf.formatting_sync(nil, 1000) end
     autocmd BufWritePre *.h lua if vim.g.lspformat == 1 then vim.lsp.buf.formatting_sync(nil, 1000) end
     autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 1000)
-    autocmd BufWritePre *.qml undojoin | Neoformat
 augroup END
 
 command ClangFormat lua vim.lsp.buf.formatting_sync(nil, 1000)
