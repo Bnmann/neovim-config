@@ -9,7 +9,7 @@ lsp.ensure_installed({
 	"gopls",
 })
 
-lsp.configure('clangd', require("clangd_extensions").prepare())
+lsp.configure("clangd", require("clangd_extensions").prepare())
 
 lsp.setup()
 
@@ -23,38 +23,37 @@ vim.diagnostic.config({
 })
 
 local sagacmd = function(cmd)
-    vim.cmd('Lspsaga ' .. cmd)
+	vim.cmd("Lspsaga " .. cmd)
 end
 
 function LspActions()
-    sagacmd('code_action')
+	sagacmd("code_action")
 end
 
 function LspRename()
-    sagacmd('rename')
+	sagacmd("rename")
 end
 
 function LspFinder()
-    sagacmd('lsp_finder')
+	sagacmd("lsp_finder")
 end
 
 local nnoremap = function(seq, callback)
-    vim.keymap.set('n', seq, callback, { silent = true })
+	vim.keymap.set("n", seq, callback, { silent = true })
 end
-
 
 require("lspsaga").setup({})
 
 vim.api.nvim_create_user_command("LspActions", function()
-    LspActions()
+	LspActions()
 end, { nargs = 0 })
 
 vim.api.nvim_create_user_command("LspRename", function()
-    LspRename()
+	LspRename()
 end, { nargs = 0 })
 
-vim.api.nvim_create_user_command('LspFinder', function()
-    LspFinder()
+vim.api.nvim_create_user_command("LspFinder", function()
+	LspFinder()
 end, { nargs = 0 })
 
 vim.api.nvim_create_user_command("LspFormat", function()
@@ -67,6 +66,8 @@ vim.api.nvim_create_user_command("LspFormat", function()
 	end
 end, { nargs = 0 })
 
-nnoremap('<C-.>', LspActions)
-nnoremap('<C-,>', LspFinder)
-nnoremap('<A-o>', function() vim.cmd('ClangdSwitchSourceHeader') end)
+nnoremap("<C-.>", LspActions)
+nnoremap("<C-,>", LspFinder)
+nnoremap("<A-o>", function()
+	vim.cmd("ClangdSwitchSourceHeader")
+end)
