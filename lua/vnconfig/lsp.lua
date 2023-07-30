@@ -57,7 +57,11 @@ end, { nargs = 0 })
 
 vim.api.nvim_create_user_command("LspFormat", function()
 	if vim.g.lspformat == 1 then
-		vim.lsp.buf.formatting_sync(nil, 1000)
+		local formatting_options = nil
+		local timeout_ms = 1000
+		local buf_number = nil
+		local filter = nil
+		vim.lsp.buf.format(formatting_options, timeout_ms, buf_number, filter)
 	end
 end, { nargs = 0 })
 
