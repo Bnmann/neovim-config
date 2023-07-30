@@ -55,6 +55,19 @@ require("telescope").setup({
 				},
 			},
 		},
+		live_grep = {
+			theme = "dropdown",
+			layout_strategy = "vertical",
+			sort_lastused = true,
+			color_devicons = true,
+			layout_config = {
+				vertical = {
+					width = 0.9,
+					anchor = "N",
+				},
+				height = 0.9,
+			},
+		},
 	},
 	extensions = {
 		fzf = {
