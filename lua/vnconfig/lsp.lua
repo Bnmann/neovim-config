@@ -5,6 +5,8 @@ lsp.ensure_installed({
 	"pylsp",
 	"pyright",
 	"clangd",
+	"csharp_ls",
+	"gopls",
 })
 
 lsp.configure('clangd', require("clangd_extensions").prepare())
