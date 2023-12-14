@@ -18,7 +18,6 @@ augroup fmt
     autocmd BufWritePre *.cpp lua if vim.g.lspformat == 1 then vim.lsp.buf.format() end
     autocmd BufWritePre *.c lua if vim.g.lspformat == 1 then vim.lsp.buf.format() end
     autocmd BufWritePre *.h lua if vim.g.lspformat == 1 then vim.lsp.buf.format() end
-    autocmd BufWritePre *.json lua vim.lsp.buf.format()
 augroup END
 
 command ClangFormat lua vim.lsp.buf.format() end
