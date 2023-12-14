@@ -9,8 +9,6 @@ lsp.ensure_installed({
 	"gopls",
 })
 
-lsp.configure("clangd", require("clangd_extensions").prepare())
-
 lsp.setup()
 
 vim.diagnostic.config({
@@ -56,6 +54,10 @@ vim.api.nvim_create_user_command("LspFinder", function()
 	LspFinder()
 end, { nargs = 0 })
 
+vim.api.nvim_create_user_command("LspShowDiagnostics", function()
+    vim.diagnostic.open_float()
+end, { nargs = 0 })
+
 vim.api.nvim_create_user_command("LspFormat", function()
 	if vim.g.lspformat == 1 then
 		local formatting_options = nil
@@ -71,3 +73,6 @@ nnoremap("<C-,>", LspFinder)
 nnoremap("<A-o>", function()
 	vim.cmd("ClangdSwitchSourceHeader")
 end)
+
+nnoremap('<space>e', vim.diagnostic.open_float)
+
